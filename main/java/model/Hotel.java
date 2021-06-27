@@ -9,13 +9,28 @@ package model;
 
 public class Hotel {
 	private String hotelName;
-	private int weekDayRate;
 	private String typeOfCustomer;
+	private int weekDayRate;
+	private int weekendRate;
 	private int costWeekDay;
-	
-	public Hotel(String hotelName, int weekDayRate) {
+
+	public Hotel() {
+
+	}
+
+	public int getWeekendRate() {
+		return weekendRate;
+	}
+
+	public void setWeekendRate(int weekendRate) {
+		this.weekendRate = weekendRate;
+	}
+
+	public Hotel(String hotelName, String typeOfCustomer, int weekDayRate, int weekendRate) {
 		this.hotelName = hotelName;
+		this.typeOfCustomer = typeOfCustomer;
 		this.weekDayRate = weekDayRate;
+		this.weekendRate = weekendRate;
 	}
 
 	public String getHotelName() {
@@ -50,6 +65,4 @@ public class Hotel {
 		this.costWeekDay = costWeekDay;
 	}
 
-
-	
 }
